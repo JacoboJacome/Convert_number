@@ -40,44 +40,44 @@ function FormConverter() {
 
 
   return (
-    <Col>
-      <Form onSubmit={e => convert(e)}>
-        <Row>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>De</Form.Label>
-              <Form.Select value={optionA} onChange={changeOption} id='a'>
-                <option value='romanos'>Romanos</option>
-                <option value='decimal'>Decimal</option>
-              </Form.Select>
-            </Form.Group>
-          </Col>
-          <Col>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>A</Form.Label>
-              <Form.Select id='b' value={optionB} onChange={changeOption}>
-                <option value='romanos'>Romanos</option>
-                <option value='decimal'>Decimal</option>
-              </Form.Select>
-            </Form.Group>
-          </Col>
-        </Row>
+      <Col>
+        <Form onSubmit={e => convert(e)}>
+          <Row>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>De</Form.Label>
+                <Form.Select value={optionA} onChange={changeOption} id='a'>
+                  <option value='romanos'>Romanos</option>
+                  <option value='decimal'>Decimal</option>
+                </Form.Select>
+              </Form.Group>
+            </Col>
+            <Col>
+              <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>A</Form.Label>
+                <Form.Select id='b' value={optionB} onChange={changeOption}>
+                  <option value='romanos'>Romanos</option>
+                  <option value='decimal'>Decimal</option>
+                </Form.Select>
+              </Form.Group>
+            </Col>
+          </Row>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>{optionA.toUpperCase()}</Form.Label>
-          <Form.Control type="text" onChange={e => setPayload(e.target.value)}/>
-        </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>{optionA.toUpperCase()}</Form.Label>
+            <Form.Control type="text" onChange={e => setPayload(e.target.value)}/>
+          </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>{optionB.toUpperCase()}</Form.Label>
-          <Form.Control type="text" value={result} disabled />
-        </Form.Group>
-      
-        <Button variant="primary" type="submit">
-          Convertir
-        </Button>
-      </Form>
-    </Col>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>{optionB.toUpperCase()}</Form.Label>
+            <Form.Control type="text" value={result} disabled />
+          </Form.Group>
+        
+          <Button variant="primary" type="submit">
+            Convertir
+          </Button>
+        </Form>
+      </Col>
   );
 }
 
